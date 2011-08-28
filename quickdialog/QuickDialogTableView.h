@@ -15,12 +15,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "QuickDialogControllerProtocol.h"
 
-@class QuickDialogController;
 @class QRootElement;
 @class QElement;
 @protocol QuickDialogStyleProvider;
-
 
 @interface QuickDialogTableView : UITableView {
 

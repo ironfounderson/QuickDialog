@@ -13,7 +13,6 @@
 //
 
 #import "QElement.h"
-#import "QuickDialogController.h"
 #import "QuickDialogTableView.h"
 #import "QSection.h"
 #import "QSortingSection.h"

@@ -13,10 +13,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class QElement;
-@class QLabelElement;
-
+#import "QLabelElement.h"
 
 @interface QButtonElement : QLabelElement {
 

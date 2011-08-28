@@ -13,12 +13,9 @@
 //
 
 
-#import "QRootElement.h"
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@class QRootElement;
-
+#import "QRootElement.h"
 
 @interface QDateTimeElement : QRootElement {
     NSDate * _dateValue;

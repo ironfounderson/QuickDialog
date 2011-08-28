@@ -12,9 +12,8 @@
 // permissions and limitations under the License.
 //
 
-#import "QSection.h"
 #import "QSortingSection.h"
-
+#import "QElement.h"
 
 @implementation QSortingSection
 

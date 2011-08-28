@@ -13,9 +13,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class QRootElement;
-@class QSection;
+#import "QRootElement.h"
 
 @interface QRadioElement : QRootElement {
 

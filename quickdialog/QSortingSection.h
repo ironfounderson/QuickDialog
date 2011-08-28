@@ -14,9 +14,7 @@
 
 
 #import <Foundation/Foundation.h>
-
-@class QSection;
-
+#import "QSection.h"
 
 @interface QSortingSection : QSection {
 

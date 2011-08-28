@@ -17,7 +17,6 @@
 #import "QRadioItemElement.h"
 #import "QRootElement.h"
 #import "QRadioElement.h"
-#import "QuickDialogController.h"
 #import "QuickDialogTableView.h"
 #import "QSection.h"
 #import "QRadioSection.h"

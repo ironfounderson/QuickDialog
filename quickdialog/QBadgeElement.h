@@ -14,10 +14,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@class QLabelElement;
-@class QRootElement;
-
+#import "QLabelElement.h"
 
 @interface QBadgeElement : QLabelElement {
 

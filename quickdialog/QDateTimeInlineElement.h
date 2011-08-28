@@ -14,10 +14,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@class QTextElement;
-@class QEntryElement;
-
+#import "QEntryElement.h"
 
 @interface QDateTimeInlineElement : QEntryElement {
     NSDate * _dateValue;

@@ -14,11 +14,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "QuickDialogControllerProtocol.h"
 
 @class QRootElement;
 
 
-@interface QuickDialogController : UITableViewController {
+@interface QuickDialogViewController : UITableViewController <QuickDialogControllerProtocol> {
 
 @private
     QRootElement *_root;

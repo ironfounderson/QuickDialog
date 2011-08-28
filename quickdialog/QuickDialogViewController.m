@@ -12,11 +12,11 @@
 // permissions and limitations under the License.
 //
 
-#import "QuickDialogController.h"
+#import "QuickDialogViewController.h"
 #import "QRootElement.h"
 #import "QuickDialogTableView.h"
 
-@implementation QuickDialogController
+@implementation QuickDialogViewController
 
 @synthesize root = _root;
 @synthesize willDisappearCallback = _willDisappearCallback;
@@ -73,7 +73,7 @@
 
 - (void)displayViewControllerForRoot:(QRootElement *)root {
 
-    QuickDialogController * newController = [QuickDialogController controllerForRoot:root];
+    QuickDialogController * newController = [QuickDialogViewController controllerForRoot:root];
     [self displayViewController:newController];
 }
 
@@ -84,11 +84,11 @@
     } else {
         controllerClass = [self class];
     }
-    return [((QuickDialogController *)[controllerClass alloc]) initWithRoot:root];
+    return [((QuickDialogViewController *)[controllerClass alloc]) initWithRoot:root];
 }
 
 + (UINavigationController*)controllerWithNavigationForRoot:(QRootElement *)root {
-    return [[UINavigationController alloc] initWithRootViewController:[QuickDialogController controllerForRoot:root]];
+    return [[UINavigationController alloc] initWithRootViewController:[QuickDialogViewController controllerForRoot:root]];
 }
 
 @end

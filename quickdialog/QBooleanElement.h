@@ -14,9 +14,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@class QElement;
-@class QLabelElement;
+#import "QLabelElement.h"
 
 @interface QBooleanElement : QLabelElement {
     BOOL _boolValue;

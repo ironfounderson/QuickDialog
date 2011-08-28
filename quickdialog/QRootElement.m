@@ -15,7 +15,6 @@
 #import "QElement.h"
 #import "QRootElement.h"
 #import "QSection.h"
-#import "QuickDialogController.h"
 
 @implementation QRootElement
 

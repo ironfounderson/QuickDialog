@@ -14,12 +14,12 @@
 
 
 #import "QuickDialogTableDelegate.h"
-#import "QuickDialogController.h"
 #import "QElement.h"
 #import "QSection.h"
 #import "QSortingSection.h"
 #import "QRootElement.h"
 #import "QuickDialogTableView.h"
+#import "QuickDialogControllerProtocol.h"
 
 
 @implementation QuickDialogTableDelegate

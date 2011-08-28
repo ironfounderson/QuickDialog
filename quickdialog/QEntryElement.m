@@ -12,10 +12,8 @@
 // permissions and limitations under the License.
 //
 
-
-#import "QElement.h"
-#import "QLabelElement.h"
 #import "QEntryElement.h"
+#import "QElement.h"
 #import "QEntryTableViewCell.h"
 #import "QuickDialogTableView.h"
 

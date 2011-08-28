@@ -13,12 +13,9 @@
 //
 
 
-#import "QElement.h"
-#import "QLabelElement.h"
 #import "QButtonElement.h"
 #import "QuickDialogTableView.h"
-#import "QuickDialogController.h"
-
+#import "QuickDialogControllerProtocol.h"
 
 @implementation QButtonElement
 

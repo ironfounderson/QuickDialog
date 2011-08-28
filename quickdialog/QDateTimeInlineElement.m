@@ -12,12 +12,10 @@
 // permissions and limitations under the License.
 //
 
-
+#import "QDateTimeInlineElement.h"
 #import "QRootElement.h"
 #import "QElement.h"
 #import "QLabelElement.h"
-#import "QEntryElement.h"
-#import "QDateTimeInlineElement.h"
 #import "QEntryTableViewCell.h"
 #import "QDateEntryTableViewCell.h"
 #import "QuickDialogTableView.h"

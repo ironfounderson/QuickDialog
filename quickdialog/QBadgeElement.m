@@ -12,6 +12,7 @@
 // permissions and limitations under the License.
 //
 
+#import "QBadgeElement.h"
 #import "QBadgeTableCell.h"
 #import "QuickDialogTableView.h"
 

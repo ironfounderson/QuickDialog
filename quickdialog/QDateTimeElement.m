@@ -16,9 +16,11 @@
 // the animation is not smooth when using the dateselector as a keyboard
 
 
-
+#import "QDateTimeElement.h"
 #import "QDateTimeInlineElement.h"
 #import "QSection.h"
+#import "QuickDialogViewController.h"
+#import "QuickDialogControllerProtocol.h"
 
 @interface QDateTimeElement ()
 - (void)initializeRoot;
@@ -123,7 +125,7 @@
     if (self.sections==nil)
             return;
 
-    QuickDialogController * newController = [[QuickDialogController alloc] initWithRoot:self];
+    QuickDialogController * newController = [[QuickDialogViewController alloc] initWithRoot:self];
     newController.tableView.scrollEnabled = NO;
     [controller displayViewController:newController];
 

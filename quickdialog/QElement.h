@@ -14,8 +14,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "QuickDialogControllerProtocol.h"
 
-@class QuickDialogController;
 @class QuickDialogTableView;
 @class QSection;
 

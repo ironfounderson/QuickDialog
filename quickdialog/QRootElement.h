@@ -14,8 +14,8 @@
 
 
 #import <Foundation/Foundation.h>
-
 #import "QElement.h"
+
 @class QSection;
 
 @interface QRootElement : QElement {

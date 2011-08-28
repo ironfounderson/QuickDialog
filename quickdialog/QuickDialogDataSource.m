@@ -14,7 +14,6 @@
 
 
 #import "QuickDialogDataSource.h"
-#import "QuickDialogController.h"
 #import "QSection.h"
 #import "QElement.h"
 #import "QRootElement.h"
