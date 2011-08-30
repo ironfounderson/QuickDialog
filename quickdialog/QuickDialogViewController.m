@@ -19,7 +19,9 @@
 @implementation QuickDialogViewController
 
 @synthesize root = _root;
-@synthesize willDisappearCallback = _willDisappearCallback;
+@synthesize willDisappearBlock = _willDisappearCallback;
+@synthesize cancelBlock;
+@synthesize saveBlock;
 
 - (void)loadView {
     [super loadView];
@@ -51,7 +53,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (_willDisappearCallback!=nil){
-        _willDisappearCallback();
+        _willDisappearCallback(self);
     }
 }
 

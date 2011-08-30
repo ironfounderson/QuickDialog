@@ -131,7 +131,7 @@
 
 	__block QuickDialogController *controllerForBlock = newController;
 	
-    newController.willDisappearCallback = ^{
+    newController.willDisappearBlock = ^(QuickDialogController *dialogController){
 		NSLog(@"here");
         NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 

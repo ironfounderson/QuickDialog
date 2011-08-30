@@ -25,21 +25,11 @@
     QRootElement *_root;
     id <UITableViewDataSource> _dataSource;
     id <UITableViewDelegate> _delegate;
-
-    void (^_willDisappearCallback)(void);
-
 }
-
-@property(nonatomic, retain) QRootElement * root;
-@property(nonatomic, copy) void (^willDisappearCallback)();
 
 - (void)loadView;
 
 - (QuickDialogController *)initWithRoot:(QRootElement *)rootElement;
-
-- (void)displayViewController:(UIViewController *)newController;
-
-- (void)displayViewControllerForRoot:(QRootElement *)element;
 
 + (QuickDialogController *)controllerForRoot:(QRootElement *)element;
 

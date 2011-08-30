@@ -9,16 +9,27 @@
 #import <UIKit/UIKit.h>
 
 @class QRootElement;
+@protocol QuickDialogControllerProtocol;
+
+typedef UIViewController<QuickDialogControllerProtocol> QuickDialogController;
+
+typedef void(^QWillDisapearCallback)(QuickDialogController*);
 
 @protocol QuickDialogControllerProtocol <NSObject>
 
+@required
 @property (nonatomic, retain) QRootElement *root;
 @property (nonatomic, retain) UITableView *tableView;
-@property(nonatomic, copy) void (^willDisappearCallback)();
+
+@optional
+
+@property (nonatomic, copy) QWillDisapearCallback willDisappearBlock;
+@property (nonatomic, copy) QWillDisapearCallback saveBlock;
+@property (nonatomic, copy) QWillDisapearCallback cancelBlock;
 
 - (void)displayViewController:(UIViewController *)newController;
 - (void)displayViewControllerForRoot:(QRootElement *)element;
 
-@end
+- (id)valueForKey:(NSString *)key;
 
-typedef UIViewController<QuickDialogControllerProtocol> QuickDialogController;
+@end
