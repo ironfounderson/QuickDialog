@@ -40,7 +40,7 @@
 }
 
 - (QDateTimeInlineElement *)initWithTitle:(NSString *)string date:(NSDate *)date {
-    self = [super initWithTitle:string Value:[date description]];
+    self = [super initWithTitle:string value:[date description]];
     if (self!=nil){
         _dateValue = date;
         _mode = UIDatePickerModeDateAndTime;
@@ -60,6 +60,7 @@
         cell = [[QDateEntryTableViewCell alloc] init];
     }
     [cell prepareForElement:self inTableView:tableView];
+    _cell = cell;
     return cell;
 
 }
@@ -70,5 +71,8 @@
     [obj setValue:_dateValue forKey:_key];
 }
 
+- (void)becomeFirstResponder {
+    [_cell becomeFirstResponder];
+}
 
 @end

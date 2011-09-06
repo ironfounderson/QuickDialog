@@ -18,6 +18,7 @@ typedef void(^QWillDisapearCallback)(QuickDialogController*);
 @protocol QuickDialogControllerProtocol <NSObject>
 
 @required
+
 @property (nonatomic, retain) QRootElement *root;
 @property (nonatomic, retain) UITableView *tableView;
 

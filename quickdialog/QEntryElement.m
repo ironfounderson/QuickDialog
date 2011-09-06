@@ -27,7 +27,7 @@
 
 
 - (QEntryElement *)initWithTitle:(NSString *)title Value:(NSString *)value Placeholder:(NSString *)placeholder {
-    self = [self initWithTitle:title Value:nil];
+    self = [self initWithTitle:title value:nil];
     _textValue = value;
     _placeholder = placeholder;
     return self;
@@ -41,6 +41,7 @@
     }
     
     [cell prepareForElement:self inTableView:tableView];
+    _cell = cell;
     return cell;
 
 }
@@ -54,6 +55,10 @@
 		return;
 	
 	[obj setValue:_textValue forKey:_key];
+}
+
+- (void)becomeFirstResponder {
+    [_cell becomeFirstResponder];
 }
 
 

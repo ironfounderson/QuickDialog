@@ -43,6 +43,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.showsReorderControl = YES;
     cell.accessoryView = nil;
+    _cell = cell;
     return cell;
 }
 
@@ -54,7 +55,7 @@
     if (self.controllerAction!=NULL){
         SEL selector = NSSelectorFromString(self.controllerAction);
         if ([tableView.controller respondsToSelector:selector]) {
-            objc_msgSend(tableView.controller ,selector);
+            objc_msgSend(tableView.controller ,selector, self);
         }
     }
 }

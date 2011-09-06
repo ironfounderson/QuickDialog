@@ -13,14 +13,16 @@
 //
 
 #import "QLabelElement.h"
+#import "QuickDialogTableView.h"
 
 @implementation QLabelElement
 
 @synthesize image = _image;
 @synthesize value = _value;
+@synthesize object;
 
 
-- (QLabelElement *)initWithTitle:(NSString *)title Value:(NSString *)value {
+- (QLabelElement *)initWithTitle:(NSString *)title value:(NSString *)value {
    self = [super init];
    _title = title;
    _value = value;
@@ -28,23 +30,36 @@
 }
 
 - (UITableViewCell *)getCellForTableView:(QuickDialogTableView *)tableView controller:(QuickDialogController *)controller {
-    UITableViewCell *cell = [super getCellForTableView:tableView controller:controller];
-    cell.accessoryType = UITableViewCellAccessoryNone;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    _cell = [tableView dequeueReusableCellWithIdentifier:@"QLabelElementCell"];
+    if (_cell == nil){
+        _cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"QLabelElementCell"]; 
+    }
+    _cell.showsReorderControl = YES;
+    _cell.textLabel.text = _title;
+    _cell.detailTextLabel.text = _value;
+    _cell.imageView.image = _image;
+    _cell.accessoryView = nil;
+    _cell.accessoryType = self.sections!= nil || self.controllerAction!=nil ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+    _cell.selectionStyle = self.sections!= nil || self.controllerAction!=nil || self.onSelected!=nil ? UITableViewCellSelectionStyleBlue: UITableViewCellSelectionStyleNone;
 
-    cell.textLabel.text = _title;
-    cell.detailTextLabel.text = _value;
-    cell.imageView.image = _image;
-    cell.accessoryView = nil;
-    cell.accessoryType = self.sections!= nil || self.controllerAction!=nil ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
-    cell.selectionStyle = self.sections!= nil || self.controllerAction!=nil ? UITableViewCellSelectionStyleBlue: UITableViewCellSelectionStyleNone;
-
-    return cell;
+    return _cell;
 }
 
 - (void)selected:(QuickDialogTableView *)tableView controller:(QuickDialogController *)controller indexPath:(NSIndexPath *)path {
     [super selected:tableView controller:controller indexPath:path];
 }
 
+- (void)updateValue:(NSString *)value {
+    _value = value;
+    if (_cell)
+        _cell.detailTextLabel.text = _value;
+}
+
+- (void)fetchValueIntoObject:(id)obj {
+	if (_key==nil)
+		return;
+	
+	[obj setValue:self.object forKey:_key];
+}
 
 @end

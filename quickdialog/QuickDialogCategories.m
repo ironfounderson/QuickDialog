@@ -23,7 +23,7 @@
 
 - (QEntryElement *)insertEntryElementWithTitle:(NSString *)title key:(NSString *)key {
     QEntryElement *nameElement = [[QEntryElement alloc] initWithTitle:title
-                                                                Value:@""];
+                                                                value:@""];
     nameElement.key = key;
     [self addElement:nameElement];
     return nameElement;

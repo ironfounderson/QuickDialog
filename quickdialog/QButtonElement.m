@@ -22,7 +22,7 @@
 
 
 - (QButtonElement *)initWithTitle:(NSString *)title {
-    self = [super initWithTitle:title Value:nil];
+    self = [super initWithTitle:title value:nil];
     return self;
 }
 

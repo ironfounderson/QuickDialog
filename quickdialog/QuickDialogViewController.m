@@ -22,6 +22,7 @@
 @synthesize willDisappearBlock = _willDisappearCallback;
 @synthesize cancelBlock;
 @synthesize saveBlock;
+@dynamic tableView;
 
 - (void)loadView {
     [super loadView];

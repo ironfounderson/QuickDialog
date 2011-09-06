@@ -32,4 +32,5 @@
 @property(assign) BOOL isPassword;
 
 - (QEntryElement *)initWithTitle:(NSString *)string Value:(NSString *)param Placeholder:(NSString *)string1;
+- (void)becomeFirstResponder;
 @end

@@ -28,6 +28,7 @@
 
     void (^_onSelected)(void);
     NSString * _controllerAction;
+    UITableViewCell *_cell;
 }
 
 @property(nonatomic, copy) void (^onSelected)(void);

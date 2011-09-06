@@ -26,7 +26,8 @@
 
 @property(nonatomic, strong) UIImage *image;
 @property(nonatomic, strong) NSString *value;
+@property(nonatomic, strong) NSObject *object;
 
-
-- (QLabelElement *)initWithTitle:(NSString *)string Value:(NSString *)value;
+- (QLabelElement *)initWithTitle:(NSString *)string value:(NSString *)value;
+- (void)updateValue:(NSString *)value;
 @end

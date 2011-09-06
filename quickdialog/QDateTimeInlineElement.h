@@ -33,5 +33,6 @@
 
 - (QDateTimeInlineElement *)initWithTitle:(NSString *)string date:(NSDate *)date;
 
+- (void)becomeFirstResponder;
 
 @end

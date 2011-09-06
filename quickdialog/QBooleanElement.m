@@ -27,12 +27,12 @@
 
 
 - (QBooleanElement *)init {
-    self = [self initWithTitle:nil BoolValue:YES];
+    self = [self initWithTitle:nil boolValue:YES];
     return self;
 }
 
-- (QBooleanElement *)initWithTitle:(NSString *)title BoolValue:(BOOL)value {
-    self = [self initWithTitle:title Value:nil];
+- (QBooleanElement *)initWithTitle:(NSString *)title boolValue:(BOOL)value {
+    self = [self initWithTitle:title value:nil];
     _boolValue = value;
     _enabled = YES;
     return self;
